@@ -1,4 +1,4 @@
-﻿namespace CinemaWay.Web.Infrastructure.Mapping
+﻿namespace CinemaWay.Common.Mapping
 {
     using AutoMapper;
 

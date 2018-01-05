@@ -5,9 +5,11 @@ VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CinemaWay.Web", "CinemaWay.Web\CinemaWay.Web.csproj", "{A02952EF-662D-4E74-A0F7-E25783919D77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemaWay.Data", "CinemaWay.Data\CinemaWay.Data.csproj", "{0FFAEC1E-D834-41B1-B53D-ED24E859E35A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CinemaWay.Data", "CinemaWay.Data\CinemaWay.Data.csproj", "{0FFAEC1E-D834-41B1-B53D-ED24E859E35A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemaWay.Services", "CinemaWay.Services\CinemaWay.Services.csproj", "{31D64228-C591-4F56-9EEA-99212295FF7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CinemaWay.Services", "CinemaWay.Services\CinemaWay.Services.csproj", "{31D64228-C591-4F56-9EEA-99212295FF7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemaWay.Common", "CinemaWay.Common\CinemaWay.Common.csproj", "{BF1B83D0-BB86-44EE-A00E-38F60EF30893}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{31D64228-C591-4F56-9EEA-99212295FF7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31D64228-C591-4F56-9EEA-99212295FF7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31D64228-C591-4F56-9EEA-99212295FF7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF1B83D0-BB86-44EE-A00E-38F60EF30893}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF1B83D0-BB86-44EE-A00E-38F60EF30893}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF1B83D0-BB86-44EE-A00E-38F60EF30893}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF1B83D0-BB86-44EE-A00E-38F60EF30893}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
