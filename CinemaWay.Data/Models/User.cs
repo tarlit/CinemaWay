@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
-
-namespace CinemaWay.Data.Models
+﻿namespace CinemaWay.Data.Models
 {
+    using Microsoft.AspNetCore.Identity;
+
     public class User : IdentityUser
     {
     }

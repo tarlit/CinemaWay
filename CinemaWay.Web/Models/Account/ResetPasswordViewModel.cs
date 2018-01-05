@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CinemaWay.Web.Models.AccountViewModels
+namespace CinemaWay.Web.Models.Account
 {
     public class ResetPasswordViewModel
     {

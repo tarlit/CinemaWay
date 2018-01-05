@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
-using CinemaWay.Data.Models;
-
-namespace CinemaWay.Data
+﻿namespace CinemaWay.Data
 {
+    using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+    using Microsoft.EntityFrameworkCore;
+    using Models;
+
     public class CinemaWayDbContext : IdentityDbContext<User>
     {
         public CinemaWayDbContext(DbContextOptions<CinemaWayDbContext> options)

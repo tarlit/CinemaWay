@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 
-namespace CinemaWay.Web.Models.ManageViewModels
+namespace CinemaWay.Web.Models.Manage
 {
     public class ExternalLoginsViewModel
     {

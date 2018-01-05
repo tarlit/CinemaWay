@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CinemaWay.Web.Models.ManageViewModels
+namespace CinemaWay.Web.Models.Manage
 {
     public class EnableAuthenticatorViewModel
     {
