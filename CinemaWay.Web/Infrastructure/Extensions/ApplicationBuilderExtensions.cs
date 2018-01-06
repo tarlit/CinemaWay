@@ -1,17 +1,15 @@
-﻿using CinemaWay.Data;
-using CinemaWay.Data.Models;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CinemaWay.Web.Infrastructure.Extensions
+﻿namespace CinemaWay.Web.Infrastructure.Extensions
 {
+    using Data;
+    using Data.Models;
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.EntityFrameworkCore;
+    using Microsoft.Extensions.DependencyInjection;
+    using System.Threading.Tasks;
+
+    using static WebConstants;
+
     public static class ApplicationBuilderExtensions
     {
         public static IApplicationBuilder UseDatabaseMigration(this IApplicationBuilder app)
@@ -23,51 +21,47 @@ namespace CinemaWay.Web.Infrastructure.Extensions
                 var userManager = serviceScope.ServiceProvider.GetService<UserManager<User>>();
                 var roleManager = serviceScope.ServiceProvider.GetService<RoleManager<IdentityRole>>();
 
-                //Task
-                //    .Run(async () =>
-                //    {
-                //        var adminName = WebConstants.AdministratorRole;
+                Task
+                    .Run(async () =>
+                    {
+                        var roles = new[]
+                        {
+                            AdministratorRole,
+                            LecturerRole
+                        };
 
-                //        var roles = new[]
-                //        {
-                //            adminName,
-                //            WebConstants.BlogAuthorRole,
-                //            WebConstants.TrainerRole
-                //        };
+                        foreach (var role in roles)
+                        {
+                            var roleExists = await roleManager.RoleExistsAsync(role);
 
-                //        foreach (var role in roles)
-                //        {
-                //            var roleExists = await roleManager.RoleExistsAsync(role);
+                            if (!roleExists)
+                            {
+                                await roleManager.CreateAsync(new IdentityRole
+                                {
+                                    Name = role
+                                });
+                            }
+                        }
 
-                //            if (!roleExists)
-                //            {
-                //                await roleManager.CreateAsync(new IdentityRole
-                //                {
-                //                    Name = role
-                //                });
-                //            }
-                //        }
+                        var adminUser = await userManager.FindByEmailAsync(AdminEmail);
 
-                //        var adminEmail = "admin@mysite.com";
+                        if (adminUser == null)
+                        {
+                            adminUser = new User
+                            {
+                                Email = AdminEmail,
+                                UserName = AdminName,
+                                FirstName = AdminName,
+                                LastName = AdminName,
+                                Phone = AdminPhone
+                            };
 
-                //        var adminUser = await userManager.FindByEmailAsync(adminEmail);
+                            await userManager.CreateAsync(adminUser, AdminPass);
 
-                //        if (adminUser == null)
-                //        {
-                //            adminUser = new User
-                //            {
-                //                Email = adminEmail,
-                //                UserName = adminName,
-                //                Name = adminName,
-                //                Birthdate = DateTime.UtcNow
-                //            };
-
-                //            await userManager.CreateAsync(adminUser, "admin12");
-
-                //            await userManager.AddToRoleAsync(adminUser, adminName);
-                //        }
-                //    })
-                //    .Wait();
+                            await userManager.AddToRoleAsync(adminUser, AdministratorRole);
+                        }
+                    })
+                    .Wait();
             }
 
             return app;

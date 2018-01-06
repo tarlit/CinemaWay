@@ -11,11 +11,6 @@
         [Required]
         [MinLength(NameMinLength)]
         [MaxLength(NameMaxLength)]
-        public string Username { get; set; }
-
-        [Required]
-        [MinLength(NameMinLength)]
-        [MaxLength(NameMaxLength)]
         public string FirstName { get; set; }
 
         [Required]

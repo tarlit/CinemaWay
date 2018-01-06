@@ -1,13 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace CinemaWay.Web.Models.Account
+﻿namespace CinemaWay.Web.Models.Account
 {
+    using System.ComponentModel.DataAnnotations;
+
+    using static Data.DataConstants;
+
     public class RegisterViewModel
     {
+        [Required]
+        [StringLength(NameMaxLength)]
+        public string Username { get; set; }
+
+        [Required]
+        [StringLength(NameMaxLength)]
+        [Display(Name = "First Name")]
+        public string FirstName { get; set; }
+
+        [Required]
+        [StringLength(NameMaxLength)]
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
+
+        [Required]
+        [RegularExpression(@"\+\d{10,12}")]
+        public string Phone { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
