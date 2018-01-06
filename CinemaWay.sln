@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CinemaWay.Data", "CinemaWay
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CinemaWay.Services", "CinemaWay.Services\CinemaWay.Services.csproj", "{31D64228-C591-4F56-9EEA-99212295FF7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemaWay.Common", "CinemaWay.Common\CinemaWay.Common.csproj", "{BF1B83D0-BB86-44EE-A00E-38F60EF30893}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CinemaWay.Common", "CinemaWay.Common\CinemaWay.Common.csproj", "{BF1B83D0-BB86-44EE-A00E-38F60EF30893}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemaWay.Tests", "CinemaWay.Tests\CinemaWay.Tests.csproj", "{F67976F1-AA25-4374-8CD0-52E9E04DB313}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{BF1B83D0-BB86-44EE-A00E-38F60EF30893}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF1B83D0-BB86-44EE-A00E-38F60EF30893}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF1B83D0-BB86-44EE-A00E-38F60EF30893}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F67976F1-AA25-4374-8CD0-52E9E04DB313}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F67976F1-AA25-4374-8CD0-52E9E04DB313}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F67976F1-AA25-4374-8CD0-52E9E04DB313}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F67976F1-AA25-4374-8CD0-52E9E04DB313}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
