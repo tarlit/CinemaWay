@@ -11,9 +11,10 @@ using System;
 namespace CinemaWay.Data.Migrations
 {
     [DbContext(typeof(CinemaWayDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180106004159_InitialTables")]
+    partial class InitialTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
