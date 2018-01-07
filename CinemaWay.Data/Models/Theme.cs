@@ -15,10 +15,8 @@
         [MaxLength(TitleMaxLength)]
         public string Title { get; set; }
 
-        [DataType(DataType.DateTime)]
         public DateTime StartDate { get; set; }
 
-        [DataType(DataType.DateTime)]
         public DateTime EndDate { get; set; }
 
         public List<Projection> Projections { get; set; } = new List<Projection>();

@@ -11,8 +11,6 @@
         {
         }
 
-        public DbSet<Genre> Genres { get; set; }
-
         public DbSet<Movie> Movies { get; set; }
 
         public DbSet<Actor> Actors { get; set; }
@@ -27,17 +25,6 @@
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder
-                .Entity<Genre>()
-                .HasIndex(g => g.Name)
-                .IsUnique();
-
-            builder
-                .Entity<Movie>()
-                .HasOne(m => m.Genre)
-                .WithMany(g => g.Movies)
-                .HasForeignKey(m => m.GenreId);
-
             builder
                 .Entity<Comment>()
                 .HasOne(c => c.Movie)

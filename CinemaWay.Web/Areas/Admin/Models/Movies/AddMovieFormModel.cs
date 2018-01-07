@@ -1,14 +1,12 @@
-﻿namespace CinemaWay.Data.Models
+﻿namespace CinemaWay.Web.Areas.Admin.Models.Movies
 {
-    using System.Collections.Generic;
+    using CinemaWay.Data.Models;
     using System.ComponentModel.DataAnnotations;
 
-    using static DataConstants;
+    using static Data.DataConstants;
 
-    public class Movie
+    public class AddMovieFormModel
     {
-        public int Id { get; set; }
-
         [Required]
         [MinLength(NameMinLength)]
         [MaxLength(NameMaxLength)]
@@ -28,11 +26,5 @@
         public string Director { get; set; }
 
         public Genre Genre { get; set; }
-
-        public List<MovieActor> Actors { get; set; } = new List<MovieActor>();
-
-        public List<Projection> Projections { get; set; } = new List<Projection>();
-
-        public List<Comment> Comments { get; set; } = new List<Comment>();
     }
 }

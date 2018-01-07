@@ -1,19 +1,17 @@
 ﻿namespace CinemaWay.Data.Models
 {
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
-    using static DataConstants;
-
-    public class Genre
+    public enum Genre
     {
-        public int Id { get; set; }
-
-        [Required]
-        [MinLength(NameMinLength)]
-        [MaxLength(NameMaxLength)]
-        public string Name { get; set; }
-
-        public List<Movie> Movies { get; set; } = new List<Movie>();
+        Action = 0,
+        Adventure = 1,
+        Comedy = 2,
+        Crime = 3,
+        Drama = 4,
+        Fantasy = 5,
+        Historical = 6,
+        Mystery = 7,
+        Romance = 8, 
+        SciFi = 9,
+        Western = 10
     }
 }

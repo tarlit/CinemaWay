@@ -3,7 +3,7 @@
     public class DataConstants
     {
         public const int NameMinLength = 2;
-        public const int NameMaxLength = 50;
+        public const int NameMaxLength = 100;
 
         public const int TitleMinLength = 2;
         public const int TitleMaxLength = 100;
