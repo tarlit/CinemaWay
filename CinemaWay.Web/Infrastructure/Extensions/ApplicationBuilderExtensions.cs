@@ -27,7 +27,8 @@
                         var roles = new[]
                         {
                             AdministratorRole,
-                            LecturerRole
+                            LecturerRole,
+                            ModeratorRole
                         };
 
                         foreach (var role in roles)

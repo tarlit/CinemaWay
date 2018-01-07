@@ -1,13 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CinemaWay.Services.Admin.Implementations
+﻿namespace CinemaWay.Services.Admin.Implementations
 {
-    public class AdminUserService
+    using AutoMapper.QueryableExtensions;
+    using Data;
+    using Microsoft.EntityFrameworkCore;
+    using Models;
+    using System.Collections.Generic;
+    using System.Threading.Tasks;
+
+    public class AdminUserService : IAdminUserService
     {
-        
+        private readonly CinemaWayDbContext db;
+
+        public AdminUserService(CinemaWayDbContext db)
+        {
+            this.db = db;
+        }
+
+        public async Task<IEnumerable<AdminListUsersModel>> AllAsync()
+            => await this.db
+            .Users
+            .ProjectTo<AdminListUsersModel>()
+            .ToListAsync();
     }
 }

@@ -3,6 +3,7 @@
     public class WebConstants
     {
         public const string LecturerRole = "Lecturer";
+        public const string ModeratorRole = "Moderator";
         public const string AdministratorRole = "Administrator";
 
         public const string AdminName = "Boss";
