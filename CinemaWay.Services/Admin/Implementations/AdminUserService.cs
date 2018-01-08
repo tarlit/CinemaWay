@@ -16,7 +16,7 @@
             this.db = db;
         }
 
-        public async Task<IEnumerable<AdminListUsersModel>> AllAsync()
+        public async Task<IEnumerable<AdminListUsersModel>> All()
             => await this.db
             .Users
             .ProjectTo<AdminListUsersModel>()

@@ -30,7 +30,7 @@
 
         public async Task<IActionResult> Index()
         {
-            var users = await this.users.AllAsync();
+            var users = await this.users.All();
             var roles = await this.roleManager
                 .Roles
                 .Select(r => new SelectListItem

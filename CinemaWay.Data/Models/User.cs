@@ -27,5 +27,7 @@
         public List<Comment> Comments { get; set; } = new List<Comment>();
 
         public List<Ticket> Tickets { get; set; } = new List<Ticket>();
+
+        public List<Story> Stories { get; set; } = new List<Story>();
     }
 }

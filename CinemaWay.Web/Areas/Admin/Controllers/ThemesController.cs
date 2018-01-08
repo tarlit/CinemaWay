@@ -3,6 +3,7 @@
     using CinemaWay.Services.Admin;
     using CinemaWay.Web.Areas.Admin.Models.Themes;
     using CinemaWay.Web.Infrastructure.Extensions;
+    using CinemaWay.Web.Infrastructure.Filters;
     using Microsoft.AspNetCore.Mvc;
     using System.Threading.Tasks;
 
@@ -20,13 +21,9 @@
         public IActionResult Create() => View();
 
         [HttpPost]
+        [ValidateModelState]
         public async Task<IActionResult> Create(AddThemeFormModel model)
         {
-            if (!ModelState.IsValid)
-            {
-                return View(model);
-            }
-
             await this.themes.Create(
                 model.Title,
                 model.StartDate,

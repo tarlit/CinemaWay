@@ -23,6 +23,8 @@
 
         public DbSet<Comment> Comments { get; set; }
 
+        public DbSet<Story> Stories { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder
@@ -76,6 +78,12 @@
                 .HasOne(t => t.Projection)
                 .WithMany(p => p.Tickets)
                 .HasForeignKey(t => t.ProjectionId);
+
+            builder
+                .Entity<Story>()
+                .HasOne(a => a.Author)
+                .WithMany(u => u.Stories)
+                .HasForeignKey(a => a.AuthorId);
 
             base.OnModelCreating(builder);
         }

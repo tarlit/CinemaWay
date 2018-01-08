@@ -12,9 +12,10 @@ using System;
 namespace CinemaWay.Data.Migrations
 {
     [DbContext(typeof(CinemaWayDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180107195559_StoriesTable")]
+    partial class StoriesTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

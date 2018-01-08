@@ -12,6 +12,7 @@
         Mystery = 7,
         Romance = 8, 
         SciFi = 9,
-        Western = 10
+        Western = 10,
+        Animation = 11
     }
 }
